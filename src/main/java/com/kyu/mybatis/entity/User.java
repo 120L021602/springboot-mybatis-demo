@@ -24,4 +24,15 @@ public class User {
 
     @Column(name = "address")
     private String address;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }

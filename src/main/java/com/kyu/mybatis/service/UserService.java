@@ -31,9 +31,14 @@ public class UserService {
 
     public SuccessMsgResponse findByAddress(String address){
 
-        List<User> userList = new ArrayList<>();
+        System.out.println("fuck you");
 
+        List<User> userList = new ArrayList<>();
         userList = userMapper.findByAddress(address);
+
+        if(userList.isEmpty()){
+            return new SuccessMsgResponse("cnm是空的");
+        }
 
         for (User user : userList) {
             System.out.println(user);
